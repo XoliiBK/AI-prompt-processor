@@ -21,11 +21,11 @@ It shows reading input, processing each item, and saving outputs in a way that c
 4. process_prompts(prompts) – loops through each prompt, checks if it has already been processed, calls the LLM, and writes the response to a file.  
 
 ## Usage
-Make sure Python 3 is installed
-Add your prompts to prompts.txt (one per line)
-Run the script:
- python main.py
-Check the outputs folder for processed prompts
+- Make sure Python 3 is installed
+- Add your prompts to prompts.txt (one per line)
+- Run the script:
+ - python main.py
+- Check the outputs folder for processed prompts
 
 ## Part 2 — Human Approval (Design)
 - I would structure the workflow by moving from a simple file-check approach to a tracking system using a JSON file.After generating a response from the LLM, it is first marked as pending instead of being saved immediately.
