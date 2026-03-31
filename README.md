@@ -5,20 +5,20 @@ It shows reading input, processing each item, and saving outputs in a way that c
 
 ## What the script does
 
-- Reads a list of prompts from a file called `prompts.txt` (one prompt per line).  
+- Reads a list of prompts from a file called prompts.txt (one prompt per line).  
 - For each prompt:
-  - Sends it to a mock LLM function (`call_llm`) that simulates processing.  
-  - Saves the resulting response to a separate text file in the `outputs/` folder.  
+  - Sends it to a mock LLM function (call_llm) that simulates processing.  
+  - Saves the resulting response to a separate text file in the outputs folder.  
   - Skips prompts that were already processed to prevent duplication.  
 - Ensures the script is idempotent - running it multiple times won’t overwrite existing outputs.  
 - Provides simple console messages to show which prompts were processed.
 
 ## How it works
 
-1. `read_file(filename)` – reads all prompts from a text file.  
-2. `call_llm(prompt)` – simulates an LLM by returning `"Processed: {prompt}"`.  
-3. `prompt_to_filename(prompt)` – converts each prompt to a readable filename for storage.  
-4. `process_prompts(prompts)` – loops through each prompt, checks if it has already been processed, calls the LLM, and writes the response to a file.  
+1. read_file(filename) – reads all prompts from a text file.  
+2. call_llm(prompt) – simulates an LLM by returning "Processed: {prompt}".  
+3. prompt_to_filename(prompt) – converts each prompt to a readable filename for storage.  
+4. process_prompts(prompts) – loops through each prompt, checks if it has already been processed, calls the LLM, and writes the response to a file.  
 
 ## Usage
 Make sure Python 3 is installed
