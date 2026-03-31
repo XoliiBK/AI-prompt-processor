@@ -28,17 +28,17 @@ Run the script:
 Check the outputs folder for processed prompts
 
 ## Part 2 — Human Approval (Design)
--I would structure the workflow by moving from a simple file-check approach to a tracking system using a JSON file.After generating a response from the LLM, it is first marked as pending instead of being saved immediately.
--Instead of saving responses directly to .txt files, the script would first store each prompt and its response in this JSON file.
--I would represent each prompt with a state to track progress:
-    -pending — response has been generated but waiting for human review/approval
-    -approved — response  accepted and saved to the outputs folder
-    -rejected — response is discarded and marked to avoid reprocessing
--For pending items, I would prompt the user to either approve or reject each response.(e.g. Approve (Y/N))
--If a prompt is approved, I would save the response to a file and update its state to approved.
--If a prompt is rejected, I would not save the response and update its state to rejected.
--I would use the JSON file to keep track of progress across runs, so the script only shows pending items that still need review.
--To ensure idempotency, the script would skip all prompts that are already marked as approved or rejected, and only process or review those marked as pending.
+- I would structure the workflow by moving from a simple file-check approach to a tracking system using a JSON file.After generating a response from the LLM, it is first marked as pending instead of being saved immediately.
+- Instead of saving responses directly to .txt files, the script would first store each prompt and its response in this JSON file.
+- I would represent each prompt with a state to track progress:
+    - pending — response has been generated but waiting for human review/approval
+    - approved — response  accepted and saved to the outputs folder
+    - rejected — response is discarded and marked to avoid reprocessing
+- For pending items, I would prompt the user to either approve or reject each response.(e.g. Approve (Y/N))
+- If a prompt is approved, I would save the response to a file and update its state to approved.
+- If a prompt is rejected, I would not save the response and update its state to rejected.
+- I would use the JSON file to keep track of progress across runs, so the script only shows pending items that still need review.
+- To ensure idempotency, the script would skip all prompts that are already marked as approved or rejected, and only process or review those marked as pending.
 
 ## Part 3 — Reflection
 
