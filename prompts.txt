@@ -1,0 +1,5 @@
+Explain machine learning
+What is an API?
+Define recursion
+What is python
+Explain indempotency
