@@ -1,4 +1,4 @@
-#Software Engineering Internship Placement — Technical Screening Task
+#Technical Screening Task
 
 This repository contains a simple Python script that processes prompts from a text file and saves the results.
 It shows reading input, processing each item, and saving outputs in a way that can be re-run without duplicating.
